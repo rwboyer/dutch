@@ -1,0 +1,33 @@
+#footer-container {
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: rem-calc(60);
+	background: url(/wp-content/themes/FoundationPress-master/assets/images/footer-bg.png);
+
+	#footer {
+		@include grid-row();
+		padding: rem-calc(30) 0;
+		article {color: #fff;}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.footer{
+  @include grid-column(12);
+  font-family: $header-font-family;
+  text-rendering: geometricPrecision;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  img{
+    margin: 1rem 0px 1rem 0px;
+  }
+  p{
+    font-family: "Coustard", serif;
+  }
+}

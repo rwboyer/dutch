@@ -1,0 +1,144 @@
+// Add some whitespace between top bar and content
+.top-bar-container, .tab-bar {
+	margin-bottom: rem-calc(32);
+	background: url(/wp-content/themes/FoundationPress-master/assets/images/header-bg.png);
+	height:85px;
+	position: relative;
+	z-index: 5;
+	h1{
+  	color: #000;
+	}
+
+	@media only screen and (max-width: ($topbar-breakpoint)) {
+		.top-bar-left {
+			li.name {
+				padding-left: rem-calc(50);
+			}
+
+			li.toggle-topbar a, li.menu-icon {
+				position: absolute;
+				left: 0;
+			}
+
+		}
+
+		.top-bar-right {
+			li.toggle-topbar a, li.menu-icon {
+				position: absolute;
+				right: 0;
+			}
+		}
+	}
+}
+
+.left-small {
+	border-right: 0;
+}
+
+.right-small {
+	border-left: 0;
+}
+
+.top-bar .name {
+	h1 a { 
+  	font-weight: 500;
+  	color: #000;
+  }
+}
+
+//!RWB custom topbar for Jennifer's
+
+.red-line{
+  height: 55px;
+  border-bottom: 1px solid #e8c6b0;
+}
+
+.top-bar
+{
+    z-index: 10;
+    background: none;
+    margin-left: 0 !important;
+    padding: 1rem;
+    transition: all 0.5s ease 0.1s;
+    // LOGO ADJUSTMENT
+    ul.title-area img {
+        margin: -10px 0 0 0;
+    }
+    .top-bar-section ul {
+        background: none;
+        margin-top: rem-calc(3);
+        // MENU ITEM STYLES
+        li a:not(.button), li.active a:not(.button) {
+            color: #000;
+            background: none;
+            line-height: 30px;
+            font-size: 1rem;
+            font-family: im_fell_english_scregular;
+            padding: 0;
+            margin: 5px 0 0 0;
+            text-transform: uppercase;
+        }
+        // MENU ITEM HOVERS
+        li a:not(.button):hover {
+            background: none;
+            border-bottom: 2px solid $primary-color;
+            color: #000 !important;
+        }
+        // MENU ITEM ACTIVE
+        li.active a:not(.button) {
+            border-bottom: 2px solid $primary-color;
+            color: #000;
+            &:hover {
+                background: none;
+            }
+        }
+        li {
+            margin-left: 20px;
+            background: none;
+            a {
+                color: #000;
+            }
+        }
+    }
+    // DROPDOWN MENU
+    .top-bar-section ul li:hover:not(.has-form) > a {
+        color: #000;
+    }
+    .top-bar-section li ul.dropdown {
+        background: #000;
+        border: 1px solid #ddd;
+        color: #000;
+        li {
+            border-bottom: 1px solid #ddd;
+            margin: 0;
+            padding: 5px 15px 5px 15px;
+        }
+    }
+    .top-bar-section li ul.dropdown li a:not(.button):hover, .top-bar-section li ul.dropdown li a:not(.button) {
+        background: none;
+        color: #222;
+        border-bottom: none;
+        padding: 20px -4px 40px 45px;
+    }
+    .top-bar-section ul.dropdown li:hover:not(.has-form) > a:not(.button) {
+        background: none;
+        color: #222;
+    }
+    // DROPDOWN ARROW
+    .has-dropdown > a:after {
+        border-color: rgba(0, 0, 0, 0.5) transparent transparent;
+        margin-top: -5px;
+    }
+}
+
+// Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
+// The $topbar-breakpoint can be edited in _custom-settings.scss.
+
+@media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {
+  .tab-bar { display: none; }
+}
+
+// Hide the topbar when the screen size is smaller than the topbar breakpoint
+@media only screen and (max-width: $topbar-breakpoint) {
+  body.offcanvas .top-bar-container { display: none;}
+}
