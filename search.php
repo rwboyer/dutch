@@ -14,17 +14,27 @@ get_header(); ?>
 
 		<?php do_action( 'foundationpress_before_content' ); ?>
 
-		<h2><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h2>
+		<h1 class="page-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
+		
+  <?php if (get_post_type() == 'product') : ?>
+    <ul class="products">
+	<?php endif;?>
 
 	<?php if ( have_posts() ) : ?>
-
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+		  <?php if (get_post_type() == 'product') { ?>
+  			<?php get_template_part( 'content', 'product' ); ?>
+		  <?php } else { ?>
+  			<?php get_template_part( 'content', get_post_format() ); ?>  		  
+		  <?php } ?>
 		<?php endwhile; ?>
-
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
+	<?php endif;?>
+
+  <?php if (get_post_type() == 'product') : ?>
+    </ul>
 	<?php endif;?>
 
 	<?php do_action( 'foundationpress_before_pagination' ); ?>

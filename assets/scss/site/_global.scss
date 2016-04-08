@@ -8,6 +8,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	background: url(/wp-content/themes/FoundationPress-master/assets/images/site-bg.jpg);
+	mark{
+  	background: none;
+	}
 }
 
 h1{
@@ -80,4 +83,68 @@ img.alignright {
     border: 1px solid $primary-color;
     border-radius: 3px;
   }
+}
+
+.ninja-forms-form{
+  font-family: 'Coustard';
+  input[type="submit"]{
+    color: $secondary-color;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+  }
+}
+
+.bne-flyout-wrapper form.ninja-forms-form{
+  margin-left: 0;
+  margin-right: 0;
+  input[type], textarea, div{
+    font-size: 1rem;
+  }
+}
+
+div.flyout-content-body{
+  label{
+    font-size: 1rem;
+    color: $white;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    line-height: 1.2em;
+  }
+  p{
+    font-family: 'Coustard';
+    font-size: 1rem;
+  }
+}
+
+ul.clearing-thumbs{
+  li{ 
+    a{
+      text-align: center;
+      display: block;
+    }
+    p{
+      text-align: center;
+    }
+  }
+}
+
+.accordion .accordion-navigation>a, .accordion dd>a{
+  background: $dtc-tan;
+}
+
+.product-card-wrapper h3{
+  font-size: 1.2rem;
+}
+
+.woocommerce div.product form.cart .variations td.label{
+  padding-right: 2rem;
+  background: none;
+}
+
+iframe{
+  max-width: 100%;
+  width: 100%;
+  height: rem-calc(350px);
 }
