@@ -3,7 +3,7 @@
 	if ( has_post_thumbnail( $post->ID ) ) :
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 		$image = $image[0];
-		echo '<header id="featured-hero" role="banner" style="background-image: url(\'' . $image .  '\')" >' ?>
+		echo '<header id="featured-hero" role="banner" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(\'' . $image .  '\'); background-size: cover;" >' ?>
 		<h1 class="entry-title-alt">Dutch Country Auctions</h1>
 		<h3 class="entry-title-alt fancy">The Stamp Center</h3>
 		<h2 class="entry-title-alt"><?php the_title(); ?></h2>
