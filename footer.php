@@ -20,6 +20,7 @@
   		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/associations.png">
   		<p>DUTCH COUNTRY AUCTIONS   |   THE STAMP CENTER   |   4115 CONCORD PIKE   |   WILMINGTON, DE  19803</p>
   		<p>(302) 478-8740  |  FAX (302) 478-8779  | <a href="mailto:auctions@dutchcountryauctions.com">Auctions@DutchCountryAuctions.com</a></p>
+  		<p class="facebook">Visit Us On&nbsp;<a href="http://facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>&nbsp;Facebook</p>
   		<p class="footer-small">by 2Fish</p>
 		</div>
 		<?php do_action( 'foundationpress_after_footer' ); ?>
