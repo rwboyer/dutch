@@ -158,13 +158,26 @@ iframe{
 /* WooCommerce stuff */
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product{
-  min-height: 20rem;
-  h3{
-    min-height: 6rem;
+  @media #{$medium-up} {
+    min-height: 20rem;
+    h3{
+      min-height: 6rem;
+    }
+    .button{
+      position: absolute;
+      bottom: 0;
+    }
   }
-  .button{
-    position: absolute;
-    bottom: 0;
+}
+
+.woocommerce {
+  @media #{$small-only} {
+  	table.cart th, #content table.cart th, table.cart td, #content table.cart td, table.cart tr, #content table.cart tr, #content-area table tr, #content-area table td, #content-area table th { padding: .857em 0.287em; }
+  
+  	.woocommerce .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 { width: 100% !important; }
+  	.woocommerce .woocommerce form .form-row, .woocommerce-page form .form-row { width: auto !important; float: none !important; }
+  
+  	#order_review .shop_table { margin-left: 0; }
   }
 }
 
