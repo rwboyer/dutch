@@ -17,7 +17,7 @@
 get_header(); ?>
 
 <div class="row">
-	<?php get_template_part( 'parts/check-if-sidebar-exist' ); ?>
+	<div class="small-12 columns" role="main">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -46,6 +46,6 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
+	<?php //get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>
