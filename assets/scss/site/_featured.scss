@@ -29,25 +29,27 @@
 }
 
 .fancy{
-  &:before{
-    content: "u";
-    font-family: wmdividers1regular;
-    font-size: .8rem;
-    margin-right: 1rem;
-    color: $primary-color;
-  }
-  &:after{
-    content: "u";
-    font-family: wmdividers1regular;
-    font-size: .8rem;
-    margin-left: 1rem;
-    color: $primary-color;
-    display: inline-block;
-    -moz-transform: scale(-1, 1);
-    -webkit-transform: scale(-1, 1);
-    -o-transform: scale(-1, 1);
-    -ms-transform: scale(-1, 1);
-    transform: scale(-1, 1);
+  @media #{$medium-up} {
+    &:before{
+      content: "u";
+      font-family: wmdividers1regular;
+      font-size: .8rem;
+      margin-right: 1rem;
+      color: $primary-color;
+    }
+    &:after{
+      content: "u";
+      font-family: wmdividers1regular;
+      font-size: .8rem;
+      margin-left: 1rem;
+      color: $primary-color;
+      display: inline-block;
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+    }
   }
 }
 
