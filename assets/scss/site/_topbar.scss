@@ -141,4 +141,5 @@
 // Hide the topbar when the screen size is smaller than the topbar breakpoint
 @media only screen and (max-width: $topbar-breakpoint) {
   body.offcanvas .top-bar-container { display: none;}
+  .tab-bar-section {padding: 0;}
 }
